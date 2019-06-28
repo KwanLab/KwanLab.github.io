@@ -59,3 +59,7 @@ ul.posts li {
     display: table;
     clear: both;
 }
+
+.circular {
+    border-radius: 50%;
+}
