@@ -45,3 +45,7 @@ ul.posts li {
 .circular {
     border-radius: 50%;
 }
+
+.small {
+    font-size: 1em;
+}
