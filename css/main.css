@@ -49,3 +49,8 @@ ul.posts li {
 .small {
     font-size: 1em;
 }
+
+.nowrap {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
