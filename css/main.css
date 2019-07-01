@@ -54,3 +54,7 @@ ul.posts li {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
+
+img {
+    max-width: 100%;
+}
