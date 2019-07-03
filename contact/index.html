@@ -2,6 +2,22 @@
 layout: default
 title: Contact Us
 ---
+<style>
+	.google-maps {
+	    position: relative;
+	    padding-bottom: 75%; // This is the aspect ratio
+	    height: 0;
+	    overflow: hidden;
+	}
+	.google-maps iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100% !important;
+	    height: 100% !important;
+	}
+</style>
+
 <div class="blurb">
         <h1>Contact Us</h1>
 </div><!-- /.blurb -->
@@ -11,24 +27,24 @@ title: Contact Us
 		<div class="nowrap">
 			<p></p>
 			<h4>Email Jason directly at:</h4>
-			<p> jason [dot] kwan [at] wisc [dot] edu </p>
+			<p class="small"> jason [dot] kwan [at] wisc [dot] edu </p>
 		</div>
 
 		<div class="nowrap">
 			<p></p>
 			<h4>Mailing address:</h4>
-			<p>School of Pharmacy</p>
-			<p>University of Wisconsin-Madison</p>
-			<p>777 Highland Avenue</p>
-			<p>Madison, WI 53705-2222</p>
+			<p class="small">School of Pharmacy<br>
+			University of Wisconsin-Madison<br>
+			777 Highland Avenue<br>
+			Madison, WI 53705-2222</p>
 		</div>
 
 		<div class="nowrap">
 			<p></p>
 			<h4>Office:</h4>
 
-			<p>6109 Rennebohm Hall</p>
-			<p>Phone: 608-262-3829</p>
+			<p class="small">6109 Rennebohm Hall</p>
+			<p class="small">Phone: 608-262-3829</p>
 		</div>
 
 	</div>
@@ -44,7 +60,7 @@ title: Contact Us
 				<!-- Google map -->
 				<div class="container-fluid">
 					<div class="map-responsive">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.2323204468807!2d-89.43044808426606!3d43.07861089741197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807ac8d0cd4b379%3A0xb58993e04eec5ad5!2sRennebohm+Hall%2C+777+Highland+Ave%2C+Madison%2C+WI+53705!5e0!3m2!1sen!2sus!4v1562080013792!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.2323204468807!2d-89.43044808426606!3d43.07861089741197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807ac8d0cd4b379%3A0xb58993e04eec5ad5!2sRennebohm+Hall%2C+777+Highland+Ave%2C+Madison%2C+WI+53705!5e0!3m2!1sen!2sus!4v1562080013792!5m2!1sen!2sus" width="525" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
 
