@@ -18,3 +18,41 @@ title: Publications
         	<p><a href="https://github.com/KwanLab/Autometa">Download the source code</a></p>
         </div>
 </div>
+
+<!-- Map Section -->
+<div class="row marketing">
+    <div class="col-sm-12">
+        <h2>User Locations</h2>
+        <div id="mapid" style="height: 500px;"></div>
+    </div>
+</div>
+
+<!-- Include leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+<!-- Include leaflet JS and PapaParse for TSV parsing -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+<script>
+  // Set up the map and center it to the world.
+  var mymap = L.map('mapid').setView([20, 20], 2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+  }).addTo(mymap);
+
+  // Load the TSV file.
+  Papa.parse('autometa_users.txt', {
+    download: true,
+    header: true,
+    delimiter: "\t",
+    complete: function(results) {
+      results.data.forEach(function(user) {
+        // Create a pin for each user in the TSV file.
+        L.marker([user.latitude, user.longitude]).addTo(mymap)
+          .bindPopup(user.affiliation);  // Show the user's institution when the pin is hovered over.
+      });
+    }
+  });
+</script>
